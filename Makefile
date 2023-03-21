@@ -9,3 +9,6 @@ test:
 
 sync:
 	julia --project=./project -e 'using Pkg; Pkg.instantiate()'
+
+pluto:
+	julia --project=./project ./src/launch_pluto.jl
