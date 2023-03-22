@@ -3,6 +3,7 @@ PROJECT_NAME=new-project
 
 # For Windows with SSH
 winpty docker run --rm -it \
+--env-file ./.env \
 --mount type=bind,source="$(PWD)",target=/root/project \
 --mount type=bind,source="$HOME/.ssh",target=/root/.ssh \
 --name ${PROJECT_NAME}-container \
