@@ -1,5 +1,6 @@
 PROJECT_NAME=new-project
-# docker build  -t ${PROJECT_NAME}-image   .
+
+docker build  -t ${PROJECT_NAME}-image   .
 
 # For Windows with SSH
 winpty docker run --rm -it \

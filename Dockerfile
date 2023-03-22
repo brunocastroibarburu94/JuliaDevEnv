@@ -12,8 +12,8 @@ WORKDIR "/root/project"
 # Get Packages requirements
 # Replace manifest and project tomls with the ones in project 
 # (this will allow to pre-download all packages from them) 
-COPY ./project/Project.toml /root/.julia/environments/v1.8/Project.toml
-COPY ./project/Manifest.toml /root/.julia/environments/v1.8/Manifest.toml
+COPY ./dev_project/Project.toml /root/.julia/environments/v1.8/Project.toml
+COPY ./dev_project/Manifest.toml /root/.julia/environments/v1.8/Manifest.toml
 
 # Pre-download Packages into Image
 RUN julia -e 'using Pkg; Pkg.instantiate()'
