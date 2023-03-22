@@ -4,7 +4,7 @@ FROM julia:1.8.5-bullseye
 RUN apt-get update
 
 # Install make
-RUN apt-get -y install make
+RUN apt-get -y install make git
 
 # Set work directory
 WORKDIR "/root/project"
