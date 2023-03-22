@@ -1,6 +1,11 @@
 # Julia Development Environment
 Empty template for a new project using Julia, this version is using Julia 1.8.5-bullseye, ammend Dockerfile to change to the version of Julia you want to use.
 
+### Creating an SSH key
+```bash
+ssh-keygen -t ed25519 -C "your@email.com"
+chmod 400 ~/.ssh/id_ed25519 # Set read only permissions for  your key (surface it in /root/.ssh) it saves time as is the default configuration.
+```
 
 ### Package Management ###
 When developing using Docker, all the packages from the Manifest.toml will be installed during the build process.
